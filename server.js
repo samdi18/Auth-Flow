@@ -10,8 +10,8 @@ connectDB();
 app.use(express.json());
 
 // The routes for the API of auth
-app.use('/api/users', require('./routes/users'));
-app.use('/api/auth', require('./routes/auth'));
+app.use('/api/user', require('./routes/userRoute'));
+//app.use('/api/auth', require('./routes/auth'));
 
 // for ports
 const PORT = process.env.PORT || 5000;
