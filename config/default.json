@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://test:test123@authflow.gugig.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "jwtSecret": "secret"
+}
