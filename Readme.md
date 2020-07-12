@@ -37,9 +37,6 @@ server <-- root folder for all functionalities
                    and verify the jwt token
 
 
-
-
-
 | - controller <-- contains all controller functions for the route handlers
   | - userController.js <-- registerU function
   | - authController.js <-- loginUser function and getUserByToken function
@@ -54,6 +51,7 @@ server <-- root folder for all functionalities
 | - test <-- for unit testing
    | - user.test.js
    | - auth.test.js
+```
 
 #### Exposing a new API Resource
 
@@ -69,8 +67,7 @@ server <-- root folder for all functionalities
 
 - To run tests: `npm run test`
 
-
-
+```
 ###  API documenttion
 ## Register User
 Returns user token as an object
