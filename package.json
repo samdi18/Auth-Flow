@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server",
-    "test": "mocha"
+    "test": "mocha 'test/*.test.js'"
   },
   "keywords": [],
   "author": "Samira",
