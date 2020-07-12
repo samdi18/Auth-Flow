@@ -8,22 +8,14 @@ const { expect } = chai;
 chai.use(chaiHttp);
 chai.should();
 
-// describe('Users', () => {
-//   beforeEach((done) => {
-//     Before each test we empty the database
-//     User.remove({}, (err) => {
-//       done();
-//     });
-//   });
-// });
 describe('Register User', function () {
   it('POST /api/user', function (done) {
     chai
       .request(app)
       .post('/api/user')
       .send({
-        name: 'Samiram',
-        email: 'samiram@gmail.com',
+        name: 'Harry',
+        email: 'harry@gmail.com',
         password: 'test123',
       })
       .set('Content-Type', 'application/json')
@@ -40,7 +32,11 @@ describe('Register User', function () {
     chai
       .request(app)
       .post('/api/user')
-      .send({ name: 'Samira', email: 'samira@gmail.com', password: 'test123' })
+      .send({
+        name: 'Samira',
+        email: 'samira@gmail.com',
+        password: 'test123',
+      })
       .set('Content-Type', 'application/json')
       .end(function (err, res) {
         console.log(res.body);
