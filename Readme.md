@@ -72,82 +72,81 @@ server <-- root folder for all functionalities
 ```
 ## Register User
 Returns user token as an object
-•	URL
+- URL
 /api/users
 
-•	Method
+-	Method
 POST
 
-•	URL parameter
+- URL parameter
 none
-•	Data parameter
+-	Data parameter
 Content-Type: application/json,
 {
 ‘name’: ‘Test’,
  ‘email’: ‘test@gmail.com’,
 ‘password’: ‘test123’
 }
-•	Success Response
+-	Success Response
 Code: 200,
 Content:
 {
  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWYwOGIwMzQ2NzYzYmQyYTZjNmQ1MDc4In0sImlhdCI6MTU5NDQ2MTA5NCwiZXhwIjoxNTk0ODkzMDk0fQ.hl0lTs56Ne6nbERkg-efAeT4XgfwdJoL-Di8358wev4"
 }
-•	Error Response
+- Error Response
 Code: 500
 Content: “Server Error”
 
 
 ## Login User
 Returns existing user token as an object
-•	URL
+- URL
 /api/auth
 
-•	Method
+-	Method
 POST
 
-•	URL parameter
+-	URL parameter
 None
 
-•	Headers
+-	Headers
 Content-Type: application/json,
 
-•	Data parameter
+- Data parameter
 {
 ‘email’: ‘test@gmail.com’,
 ‘password’: ‘test123’
 }
-•	Success Response
+-	Success Response
 Code: 200,
 Content:
 {
  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWYwOGIwMzQ2NzYzYmQyYTZjNmQ1MDc4In0sImlhdCI6MTU5NDQ2MTA5NCwiZXhwIjoxNTk0ODkzMDk0fQ.hl0lTs56Ne6nbERkg-efAeT4XgfwdJoL-Di8358wev4"
 }
-•	Error Response
+-	Error Response
 Code: 500
 Content: “Server Error”
 
 
 ## Get User by Token
 Returns user as an object
-•	URL
+-	URL
 /api/auth
 
-•	Method
+-	Method
 GET
 
-•	URL parameter
+-	URL parameter
 None
 
-•	Headers
+-	Headers
 Content-Type: application/json,
 x-auth-token : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWYwOGIwMzQ2NzYzYmQyYTZjNmQ1MDc4In0sImlhdCI6MTU5NDQ2MTA5NCwiZXhwIjoxNTk0ODkzMDk0fQ.hl0lTs56Ne6nbERkg-efAeT4XgfwdJoL-Di8358wev4"
 
-
-•	Data parameter
+=	Data parameter
 None
 
-•	Success Response
+-	Success Response
 Code: 200,
 Content: {
     "_id": "5f08b0346763bd2a6c6d5078",
@@ -156,7 +155,7 @@ Content: {
     "date": "2020-07-10T18:15:16.876Z",
     "__v": 0
 }
-•	Error Response
+-	Error Response
 Code: 500
 Content: “Server Error”
 ```
