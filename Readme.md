@@ -67,8 +67,9 @@ server <-- root folder for all functionalities
 
 - To run tests: `npm run test`
 
+### API documenttion
+
 ```
-###  API documenttion
 ## Register User
 Returns user token as an object
 •	URL
