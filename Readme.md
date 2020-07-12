@@ -69,93 +69,95 @@ server <-- root folder for all functionalities
 
 ### API documenttion
 
-```
 ## Register User
-Returns user token as an object
-- URL
-/api/users
 
--	Method
-POST
+Returns user token as an object
+
+- URL
+  /api/users
+
+- Method
+  POST
 
 - URL parameter
-none
--	Data parameter
-Content-Type: application/json,
-{
-‘name’: ‘Test’,
- ‘email’: ‘test@gmail.com’,
-‘password’: ‘test123’
-}
--	Success Response
-Code: 200,
-Content:
-{
- "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWYwOGIwMzQ2NzYzYmQyYTZjNmQ1MDc4In0sImlhdCI6MTU5NDQ2MTA5NCwiZXhwIjoxNTk0ODkzMDk0fQ.hl0lTs56Ne6nbERkg-efAeT4XgfwdJoL-Di8358wev4"
-}
+  none
+- Data parameter
+  Content-Type: application/json,
+  {
+  ‘name’: ‘Test’,
+  ‘email’: ‘test@gmail.com’,
+  ‘password’: ‘test123’
+  }
+- Success Response
+  Code: 200,
+  Content:
+  {
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWYwOGIwMzQ2NzYzYmQyYTZjNmQ1MDc4In0sImlhdCI6MTU5NDQ2MTA5NCwiZXhwIjoxNTk0ODkzMDk0fQ.hl0lTs56Ne6nbERkg-efAeT4XgfwdJoL-Di8358wev4"
+  }
 - Error Response
-Code: 500
-Content: “Server Error”
-
+  Code: 500
+  Content: “Server Error”
 
 ## Login User
+
 Returns existing user token as an object
+
 - URL
-/api/auth
+  /api/auth
 
--	Method
-POST
+- Method
+  POST
 
--	URL parameter
-None
+- URL parameter
+  None
 
--	Headers
-Content-Type: application/json,
+- Headers
+  Content-Type: application/json,
 
 - Data parameter
-{
-‘email’: ‘test@gmail.com’,
-‘password’: ‘test123’
-}
--	Success Response
-Code: 200,
-Content:
-{
- "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWYwOGIwMzQ2NzYzYmQyYTZjNmQ1MDc4In0sImlhdCI6MTU5NDQ2MTA5NCwiZXhwIjoxNTk0ODkzMDk0fQ.hl0lTs56Ne6nbERkg-efAeT4XgfwdJoL-Di8358wev4"
-}
--	Error Response
-Code: 500
-Content: “Server Error”
-
+  {
+  ‘email’: ‘test@gmail.com’,
+  ‘password’: ‘test123’
+  }
+- Success Response
+  Code: 200,
+  Content:
+  {
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWYwOGIwMzQ2NzYzYmQyYTZjNmQ1MDc4In0sImlhdCI6MTU5NDQ2MTA5NCwiZXhwIjoxNTk0ODkzMDk0fQ.hl0lTs56Ne6nbERkg-efAeT4XgfwdJoL-Di8358wev4"
+  }
+- Error Response
+  Code: 500
+  Content: “Server Error”
 
 ## Get User by Token
+
 Returns user as an object
--	URL
-/api/auth
 
--	Method
-GET
+- URL
+  /api/auth
 
--	URL parameter
+- Method
+  GET
+
+- URL parameter
+  None
+
+- Headers
+  Content-Type: application/json,
+  x-auth-token : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWYwOGIwMzQ2NzYzYmQyYTZjNmQ1MDc4In0sImlhdCI6MTU5NDQ2MTA5NCwiZXhwIjoxNTk0ODkzMDk0fQ.hl0lTs56Ne6nbERkg-efAeT4XgfwdJoL-Di8358wev4"
+
+= Data parameter
 None
 
--	Headers
-Content-Type: application/json,
-x-auth-token : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWYwOGIwMzQ2NzYzYmQyYTZjNmQ1MDc4In0sImlhdCI6MTU5NDQ2MTA5NCwiZXhwIjoxNTk0ODkzMDk0fQ.hl0lTs56Ne6nbERkg-efAeT4XgfwdJoL-Di8358wev4"
-
-=	Data parameter
-None
-
--	Success Response
-Code: 200,
-Content: {
-    "_id": "5f08b0346763bd2a6c6d5078",
-    "name": "test",
-    "email": "test@gmail.com",
-    "date": "2020-07-10T18:15:16.876Z",
-    "__v": 0
-}
--	Error Response
-Code: 500
-Content: “Server Error”
-```
+- Success Response
+  Code: 200,
+  Content: {
+  "\_id": "5f08b0346763bd2a6c6d5078",
+  "name": "test",
+  "email": "test@gmail.com",
+  "date": "2020-07-10T18:15:16.876Z",
+  "\_\_v": 0
+  }
+- Error Response
+  Code: 500
+  Content: “Server Error”
